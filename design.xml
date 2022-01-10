@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="cursive"
+        android:text="@string/welcome_ttt"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="106dp"
+        android:contentDescription="@string/grid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gird" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="385dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginStart="30sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="45sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="0sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <ImageView
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:tag="0" />
+
+            <ImageView
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:tag="1" />
+
+            <ImageView
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:tag="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginStart="30sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <ImageView
+                android:id="@+id/c4"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:padding="10sp"
+                android:tag="3" />
+
+            <ImageView
+                android:id="@+id/c5"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:padding="10sp"
+                android:tag="4" />
+
+            <ImageView
+                android:id="@+id/c6"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:padding="10sp"
+                android:tag="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="0sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="30sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <ImageView
+                android:id="@+id/c7"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:tag="6" />
+
+            <ImageView
+                android:id="@+id/c8"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:tag="7" />
+
+            <ImageView
+                android:id="@+id/c9"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_weight="1"
+                android:onClick="playATab"
+                android:tag="8" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="x 's turn - tap to play"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gameReset"
+        android:text="reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
